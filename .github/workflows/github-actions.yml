@@ -9,9 +9,9 @@ jobs:
     
     - name: build and tag image
       run: |
-        docker build -t firdaus12/uas-pccks:latest -f Dockerfile .
+        docker build -t firdaus12/hotel:v1 -f Dockerfile .
     
     - name: push to dockerhub
-      run: docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_SECRET}} && docker push firdaus12/uas-hotel:latest
+      run: docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_SECRET}} && docker push firdaus12/uas-hotel:v1
 
 
